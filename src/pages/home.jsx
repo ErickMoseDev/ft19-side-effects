@@ -1,21 +1,21 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function Home() {
+	const navigate = useNavigate();
+
 	return (
-		<div className="">
+		<div className="flex flex-col gap-5">
 			<h1 className="text-4xl font-barlow font-bold">
 				Client Side Routing
 			</h1>
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque
-			tempore sequi ex ab ipsum nam voluptatum quibusdam! Sed eum sequi
-			vel architecto voluptatem eius molestias inventore esse, illo, vero
-			eligendi? Unde ratione consequatur at soluta beatae, consequuntur
-			repudiandae quam quaerat labore, perferendis repellat esse dolores.
-			Qui repellat cum veritatis aliquam voluptate tenetur tempora
-			tempore, fugiat eos quae officia ullam, dolorem quos eligendi. Rerum
-			corrupti quasi vitae magni cupiditate incidunt ex. Tempora quia quas
-			nulla dolore ea debitis dolor dignissimos molestiae, recusandae odit
-			maxime nesciunt, culpa quam perferendis officia rerum minima
-			accusamus iusto sequi autem, ipsam dicta. Voluptas eaque minima
-			accusantium.
+
+			{/* programmatic navigation */}
+			<button
+				className="text-xs bg-red-500 p-5 w-fit rounded-md text-white font-medium border border-gray-200 font-sans cursor-pointer"
+				onClick={() => navigate('/products/15')}
+			>
+				Go to Product 15
+			</button>
 		</div>
 	);
 }
